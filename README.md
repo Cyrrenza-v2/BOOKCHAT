@@ -1146,3 +1146,6 @@ The guide's original MVP remains the priority: two users must be able to create 
 
 So I would now make these 36 core modules the master BookChat architecture, while keeping Campus, voice/video calls, and other advanced features behind feature flags until the core platform is proven.
 
+
+
+Deployment pipeline verified: GitHub Pages workflow auto-enables Pages and publishes the Vite dist artifact.
