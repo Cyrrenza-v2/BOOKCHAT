@@ -1,0 +1,3 @@
+-- BookChat backend schema source-of-truth. Applied to the connected Supabase project.
+-- User and admin authorization are separated through bookchat_admin_roles.
+-- All BookChat tables use RLS; browser clients use only the publishable key.
