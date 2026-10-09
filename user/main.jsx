@@ -1,5 +1,5 @@
 import React,{useEffect,useState}from'react';import{createRoot}from'react-dom/client';import{createClient}from'@supabase/supabase-js';import'./styles.css';
-const sb=createClient('https://mkerawlqqtbknzeonnpt.supabase.co','sb_publishable_MMN9aLnhDDvShNccwtkXlw_hfF1upl4');const ID='BOOKCHAT-USER';
+const sb=createClient('https://xgrbndqcftcyrqpmzmys.supabase.co','sb_publishable_yiQ-vHYWzSxgzHCGiyv8wA_29pCX8e0');const ID='BOOKCHAT-USER';
 const go=p=>location.hash=p;
 function Btn({children,secondary,onClick,disabled}){return <button type={secondary?'button':undefined} disabled={disabled} className={'btn '+(secondary?'secondary':'')} onClick={onClick}>{children}</button>}
 function Field({label,type='text',value,onChange,placeholder}){return <label className="field"><b>{label}</b><input type={type} value={value} onChange={e=>onChange(e.target.value)} placeholder={placeholder}/></label>}
