@@ -1,5 +1,5 @@
 import React,{useEffect,useMemo,useState}from'react';import{createRoot}from'react-dom/client';import{createClient}from'@supabase/supabase-js';import'./styles.css';
-const supabase=createClient('https://mkerawlqqtbknzeonnpt.supabase.co','sb_publishable_MMN9aLnhDDvShNccwtkXlw_hfF1upl4');
+const supabase=createClient('https://xgrbndqcftcyrqpmzmys.supabase.co','sb_publishable_yiQ-vHYWzSxgzHCGiyv8wA_29pCX8e0');
 const userNav=[['chats','Chats','💬'],['friends','Friends','👥'],['groups','Groups','▦'],['search','Search','⌕'],['profile','Profile','◉'],['settings','Settings','⚙']];
 const adminNav=[['dashboard','Dashboard','⌂'],['users','Users','👤'],['reports','Reports','⚑'],['moderation','Moderation','✓'],['system','System','◫'],['security','Security','▣'],['settings','Settings','⚙']];
 function useHash(){const[hash,setHash]=useState(location.hash||'#/');useEffect(()=>{const f=()=>setHash(location.hash||'#/');addEventListener('hashchange',f);return()=>removeEventListener('hashchange',f)},[]);return hash}
