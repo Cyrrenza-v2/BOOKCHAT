@@ -45,3 +45,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Verify published site responds
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          set -eu
+          echo "Checking published site at $PAGE_URL"
+          curl --fail --silent --show-error --location \
+            --retry 10 --retry-all-errors --retry-delay 10 \
+            --connect-timeout 15 --max-time 45 \
+            "$PAGE_URL" -o /tmp/bookchat-page.html
+          grep -Eiq '<title>BookChat|Opening BookChat' /tmp/bookchat-page.html
+          echo "Published BookChat page responded and contains the expected title."
